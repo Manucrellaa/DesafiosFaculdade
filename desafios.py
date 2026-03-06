@@ -37,4 +37,39 @@ else:
 print('a diferença entre eles é: ', dfc)
 
 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+#calculadora
+
+def calculadora():
+    print("+ : Soma, - : Subtração, * : Multiplicação, / : Divisão,  Selecione a operação:")
+
+    calculo = input("Digite a operação (+, -, *, /): ")
+
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+    except ValueError:
+        print("Sistema com erro! digite um numero valido")
+        return
+
+    match calculo:
+        case '+':
+            resultado = num1 + num2
+        case '-':
+            resultado = num1 - num2
+        case '*':
+            resultado = num1 * num2
+        case '/':
+            if num2 == 0:
+                resultado = "Erro: Divisão por zero"
+            else:
+                resultado = num1 / num2
+        case _:
+            resultado = "Operação inválida"
+
+    print(f"Resultado: {resultado}")
+
+calculadora()
+
    
