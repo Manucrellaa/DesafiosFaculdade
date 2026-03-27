@@ -72,4 +72,14 @@ def calculadora():
 
 calculadora()
 
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+#vetores
+
+num [0] * 10
+
+for i in range (10):
+    num[i]=i*10
+    print(num[i], end="")
+
    
